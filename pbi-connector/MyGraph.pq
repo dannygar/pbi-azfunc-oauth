@@ -33,8 +33,8 @@ scopes = {
 [DataSource.Kind="DashConnector", Publish="DashConnector.UI"]
 shared DashConnector.Feed = () =>
     let
-//         results = Web.Contents("http://localhost:7071/api/data"),
-        results = Web.Contents("https://pyfuncapi.azurewebsites.net/api/data"),
+        results = Web.Contents("http://localhost:5000/api/data"),
+//        results = Web.Contents("https://pyfuncapi.azurewebsites.net/api/data"),
         source = Json.Document(results)
     in
         source;
